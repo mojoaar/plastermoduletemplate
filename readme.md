@@ -42,7 +42,7 @@ Invoke-Plaster -TemplatePath C:\tmp\PlasterManifest\ -DestinationPath C:\tmp\Awe
 ## Example: Using the template in this repository
 1. Clone the repository down to your harddrive.
 ```
-https://github.com/mojoaar/plastermoduletemplate.git
+git clone https://github.com/mojoaar/plastermoduletemplate.git
 ```
 2. Call Plaster with the path where you cloned the repository.
 ```
