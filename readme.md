@@ -35,4 +35,6 @@ New-PlasterManifest @manifestProperties
 
 ## Example: Use the new manifest
 
-`Invoke-Plaster -TemplatePath C:\tmp\PlasterManifest\ -DestinationPath C:\tmp\AwesomeModule -Verbose`
+```
+Invoke-Plaster -TemplatePath C:\tmp\PlasterManifest\ -DestinationPath C:\tmp\AwesomeModule -Verbose
+```
