@@ -48,3 +48,10 @@ https://github.com/mojoaar/plastermoduletemplate.git
 ```
 Invoke-Plaster -TemplatePath X:\github\plastermoduletemplate\ModuleTemplate -DestinationPath X:\test -Verbose
 ```
+3. You will end up with a folder structure like shown below.
+```
+Root
+–Modulefolder
+--public
+--private
+```
