@@ -10,6 +10,5 @@ Author: <%= $PLASTER_PARAM_ModuleAuthor %>
 * todo
 
 ## Changelog
-
 * <%= $PLASTER_PARAM_ModuleVersion %>
   * Initial release of module
