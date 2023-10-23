@@ -14,7 +14,8 @@ Plaster GitHub repository: https://github.com/PowerShellOrg/Plaster
 
 ## Example: Create new manifest
 
-`$manifestProperties = @{
+```
+$manifestProperties = @{
     Path         = 'C:\tmp\PlasterManifest\PlasterManifest.xml'
     TemplateName = 'ScriptModuleTemplate'
     TemplateType = 'Project'
@@ -29,7 +30,8 @@ if (-not(Test-Path -Path $Folder -PathType Container)) {
     New-Item -Path $Folder -ItemType Directory | Out-Null
 }
 
-New-PlasterManifest @manifestProperties`
+New-PlasterManifest @manifestProperties
+```
 
 ## Example: Use the new manifest
 
