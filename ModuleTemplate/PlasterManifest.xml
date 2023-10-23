@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest
+  schemaVersion="1.2"
+  templateType="Project" xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>ScriptModuleTemplate</name>
+    <id>2dfb6590-cfe8-41f4-9ecf-338f29c7451d</id>
+    <version>1.0.0</version>
+    <title>New PowerShell Module</title>
+    <description>Scaffolds the files required for a PowerShell script module</description>
+    <author>Morten Johansen</author>
+    <tags>PowerShell, Module, ModuleManifest</tags>
+  </metadata>
+  <parameters>
+    <parameter name='ModuleName' type='text' prompt='Name of the module' default='${PLASTER_DestinationName}'/>  
+    <parameter name='ModuleDesc' type='text' prompt='Short description of this module'/>  
+    <parameter name='ModuleVersion' type='text' default='0.0.1' prompt='Enter the version number for the module'/>  
+    <parameter name='ModuleAuthor' type='user-fullname' prompt="Module authors' name"/>
+  </parameters>
+  <content>
+    <message>-----  Creating module directory structure -----</message>
+    <file source='' destination='${PLASTER_PARAM_ModuleName}\public'/>  
+    <file source='' destination='${PLASTER_PARAM_ModuleName}\private'/>
+    <message>-----  Creating files -----</message>
+    <newModuleManifest destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1' moduleVersion='$PLASTER_PARAM_ModuleVersion' rootModule='${PLASTER_PARAM_ModuleName}.psm1' author='$PLASTER_PARAM_ModuleAuthor' description='$PLASTER_PARAM_ModuleDesc'/>
+    <file source='template.psm1' destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1'/>
+    <file source='func_Template.ps1' destination='${PLASTER_PARAM_ModuleName}\public\func_Template.ps1'/>  
+    <file source='func_Template.ps1' destination='${PLASTER_PARAM_ModuleName}\private\func_Template.ps1'/> 
+    <message>-----  Creating template files -----</message>
+    <templateFile source='readme.md' destination=''/>
+    <templateFile source='license' destination=''/> 
+  </content>
+</plasterManifest>
