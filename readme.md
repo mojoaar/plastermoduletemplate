@@ -38,3 +38,13 @@ New-PlasterManifest @manifestProperties
 ```
 Invoke-Plaster -TemplatePath C:\tmp\PlasterManifest\ -DestinationPath C:\tmp\AwesomeModule -Verbose
 ```
+
+## Example: Using the template in this repository
+1. Clone the repository down to your harddrive.
+```
+https://github.com/mojoaar/plastermoduletemplate.git
+```
+2. Call Plaster with the path where you cloned the repository.
+```
+Invoke-Plaster -TemplatePath X:\github\plastermoduletemplate\ModuleTemplate -DestinationPath X:\test -Verbose
+```
